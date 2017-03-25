@@ -1,0 +1,5 @@
+{
+	'name': 'Design a geometry',
+	'icon': 'icongeo.png',
+	'class': 'OTModuleGeometry'
+}

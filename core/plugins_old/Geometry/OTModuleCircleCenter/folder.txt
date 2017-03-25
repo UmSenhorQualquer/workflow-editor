@@ -1,0 +1,5 @@
+{
+	'name': 'Find circle center',
+	'icon': 'centre.png',
+	'class': 'OTModuleCircleCenter'
+}

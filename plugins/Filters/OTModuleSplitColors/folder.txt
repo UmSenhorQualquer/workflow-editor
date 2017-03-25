@@ -1,0 +1,5 @@
+{
+	'name': 'Split Colors',
+	'icon': 'iconsubbg.jpg',
+	'class': 'OTModuleSplitColors'
+}

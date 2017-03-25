@@ -1,0 +1,5 @@
+{
+	'name': 'Convert colors',
+	'icon': 'iconsubbg.jpg',
+	'class': 'OTModuleSelectComponent'
+}

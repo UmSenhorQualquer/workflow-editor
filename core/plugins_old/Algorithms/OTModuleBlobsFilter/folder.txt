@@ -1,0 +1,5 @@
+{
+	'name': 'Blobs filter',
+	'icon': 'iconsubbg.jpg',
+	'class': 'OTModuleBlobsFilter'
+}

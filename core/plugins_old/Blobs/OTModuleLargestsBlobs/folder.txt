@@ -1,0 +1,5 @@
+{
+	'name': 'Largest blobs',
+	'icon': 'iconsubbg.jpg',
+	'class': 'OTModuleLargestBlobs'
+}

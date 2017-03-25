@@ -1,0 +1,5 @@
+{
+	'name': 'Convert to gray',
+	'icon': 'iconsubbg.jpg',
+	'class': 'Convert2Gray'
+}

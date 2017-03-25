@@ -1,0 +1,5 @@
+{
+	'name': 'Find blobs',
+	'icon': 'iconsubbg.jpg',
+	'class': 'OTModuleFindBlobs'
+}

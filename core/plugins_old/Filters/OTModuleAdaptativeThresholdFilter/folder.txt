@@ -1,0 +1,5 @@
+{
+	'name': 'Adaptative threshold filter',
+	'icon': 'iconsubbg.jpg',
+	'class': 'OTModuleAdaptativeThresholdFilter'
+}

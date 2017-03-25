@@ -1,0 +1,5 @@
+{
+	'name': 'Video input',
+	'icon': 'iconvi.jpg',
+	'class': 'OTModuleVideoInput'
+}

@@ -1,0 +1,5 @@
+{
+	'name': 'Bitwise And',
+	'icon': 'iconsubbg.jpg',
+	'class': 'OTModuleBitwiseAnd'
+}

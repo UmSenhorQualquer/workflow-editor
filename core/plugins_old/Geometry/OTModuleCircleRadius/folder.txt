@@ -1,0 +1,5 @@
+{
+	'name': 'Find Circle Radius',
+	'icon': 'radius.png',
+	'class': 'OTModuleCircleRadius'
+}

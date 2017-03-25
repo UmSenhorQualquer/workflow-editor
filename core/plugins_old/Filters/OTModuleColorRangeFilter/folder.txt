@@ -1,0 +1,5 @@
+{
+	'name': 'Color range filter',
+	'icon': 'iconsubbg.jpg',
+	'class': 'OTModuleColorRangeFilter'
+}
