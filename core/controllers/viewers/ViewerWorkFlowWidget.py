@@ -169,7 +169,7 @@ class ViewerWorkFlowWidget(QGLWidget, BaseViewer):
 								0.0, node.name)
 
 		for module in self._nodes.values():
-			for name, param  in module.formControls.items():
+			for name, param  in module.controls.items():
 				connectedModule = param.value
 				if isinstance(param, ModuleConnection) and isinstance( connectedModule, OTModuleWorkFlowItem):
 					connectedModule.viewerDrawConnectionBetween(module)
@@ -276,7 +276,7 @@ class ViewerWorkFlowWidget(QGLWidget, BaseViewer):
 
 			self._nodesConnections = []
 			for module in self._modulesList:
-				for name, param  in module.formControls.items():
+				for name, param  in module.controls.items():
 					connectedModule = param.value
 					if isinstance(param, ModuleConnection) and isinstance( connectedModule, OTModuleWorkFlowItem):
 						self._nodesConnections.append( (module.uid, connectedModule.uid) )

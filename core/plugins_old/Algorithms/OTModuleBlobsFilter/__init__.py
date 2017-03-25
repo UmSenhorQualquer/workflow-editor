@@ -1,1 +1,0 @@
-from core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter import OTModuleBlobsFilter

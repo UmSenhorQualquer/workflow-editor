@@ -1,5 +1,0 @@
-{
-	'name': 'Color filter',
-	'icon': 'iconsubbg.jpg',
-	'class': 'OTModuleColorFilter'
-}

@@ -32,7 +32,7 @@ class OTModulePlugin(BaseWidget, OTModuleWorkFlowItem):
 		res = sorted(self.getExecutionTree(), key=lambda x: -x[0])
 	
 	def updateControls(self):
-		for key, control in self.formControls.items():
+		for key, control in self.controls.items():
 			if hasattr(control, 'updateControl'): 
 				control.updateControl()
 				control.changed_event()

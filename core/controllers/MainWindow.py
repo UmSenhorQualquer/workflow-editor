@@ -38,7 +38,7 @@ class MainWindow(BaseWidget):
 		self._topDock = ControlDockWidget('Workflow', side='top')
 
 		self._loadedPlugins = ViewerModulesListWidget()
-		self.pluginsTree 	= AvailablePluginsTree()
+		self.pluginsTree 	= AvailablePluginsTree(self)
 		self._projWorkFlow  = ViewerWorkFlowWidget(self)
 		self.mdiArea 		= ControlMdiArea('Windows')
 
@@ -177,6 +177,10 @@ class MainWindow(BaseWidget):
 
 	
 	def addModule2Project(self, modulesTreeItem, pos=(0,0)):
+		if self._rootModule is None:
+			QtGui.QMessageBox.critical(None, "Project is not loaded", "Please create or open a project first!")
+			return
+
 		moduleclassname = modulesTreeItem.pluginclass
 		modulepath 		= modulesTreeItem.pluginfile
 

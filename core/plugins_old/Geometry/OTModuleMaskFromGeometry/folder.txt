@@ -1,5 +1,0 @@
-{
-	'name': 'Mask from geometry',
-	'icon': 'iconmask.jpg',
-	'class': 'OTModuleMaskFromGeometry'
-}

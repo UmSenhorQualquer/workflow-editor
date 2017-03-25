@@ -1,1 +1,0 @@
-from core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions import OTModuleAdjustPositions

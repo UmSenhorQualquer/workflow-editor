@@ -1,5 +1,0 @@
-{
-	'name': 'Background calculator',
-	'icon': 'iconbgcalc.jpg',
-	'class': 'OTModuleBackgroundCalc'
-}

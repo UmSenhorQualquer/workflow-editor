@@ -3,15 +3,19 @@ from pyforms.Controls import ControlTree
 from PyQt4 import QtGui
 from PyQt4.QtCore import QSize
 import os, glob
+from core.utils.tools import make_lambda_func
 
 
 class AvailablePluginsTree(ControlTree):
 
-	def __init__(self):
+	def __init__(self, parent):
 		super(AvailablePluginsTree, self).__init__('List of plugins')
+		self.mainwindow = parent
 		self.setHeaderHidden(True)
 		self.setIconSize( QSize(16, 16) )
 		self.__add2Node( self.invisibleRootItem(), 'plugins' )
+
+		self.item_double_clicked_event = self.__item_double_clicked_event
 
 	def __readPluginTXT(self, filename):
 		f = open(filename, 'r')
@@ -28,14 +32,28 @@ class AvailablePluginsTree(ControlTree):
 			path,_ = os.path.split(filename)
 			config = self.__readPluginTXT(filename)
 
-			treeItem = QtGui.QTreeWidgetItem()
-			if 'name' in config: treeItem.setText(0, config['name'])
-			if 'icon' in config: treeItem.setIcon(0,
-					QtGui.QIcon( os.path.join(path, config['icon']) )
-				)
+			treeItem = self.create_child(
+				config.get('name', ''),
+				parent=node,
+				icon=os.path.join(path,config.get('icon', ''))
+			)
+			
 			if 'class' in config:
-				treeItem.pluginfile = path
+				treeItem.pluginfile  = path
 				treeItem.pluginclass = config['class']
-			node.addChild(treeItem)
 
+				self.add_popup_menu_option(
+					'Add to project', 
+					make_lambda_func(self.__add_2_project, treeItem=treeItem),
+					item=treeItem
+				)
+			
 			self.__add2Node(treeItem, path)
+
+	def __add_2_project(self, treeItem):
+		self.mainwindow.addModule2Project(treeItem)
+
+	def __item_double_clicked_event(self, item):
+		if hasattr(item, 'pluginfile') and hasattr(item, 'pluginclass'):
+			self.mainwindow.addModule2Project(treeItem)
+		
