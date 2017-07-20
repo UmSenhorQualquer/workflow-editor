@@ -1,10 +1,14 @@
 from pyforms.Controls import ControlTreeView
 from pyforms.Controls import ControlTree
-from PyQt4 import QtGui
-from PyQt4.QtCore import QSize
+
 import os, glob
 from core.utils.tools import make_lambda_func
 
+
+if conf.PYFORMS_USE_QT5:
+	from PyQt5.QtCore import QSize
+else:
+	from PyQt4.QtCore import QSize
 
 class AvailablePluginsTree(ControlTree):
 
